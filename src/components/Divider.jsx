@@ -13,7 +13,7 @@ const Divider = () => {
             }}
         >
             <div className="absolute inset-0 bg-[#f8f3e7]/65 pointer-events-none backdrop-blur-[1px] z-0"></div>
-            <div className="relative z-10 h-[2px] bg-gradient-to-r from-transparent via-[#b07a3f] to-transparent opacity-70"></div>
+            <div className="relative z-10 h-0.5 bg-linear-to-r from-transparent via-[#b07a3f] to-transparent opacity-70"></div>
         </div>
     );
 };

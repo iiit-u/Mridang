@@ -4,7 +4,6 @@ import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Events from "./components/Events";
 import Schedule from "./components/Schedule";
-import Coordinators from "./components/Coordinators";
 import Gallery from "./components/Gallery";
 import Sponsors from "./components/Sponsors";
 import GalleryPage from "./components/GalleryPage";
@@ -12,6 +11,11 @@ import EventPage from "./components/EventPage";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer"; 
 import Divider from "./components/Divider";
+
+import CoordinatorsPage from "./pages/CoordinatorsPage";
+import SponsorsPage from "./pages/SponsorsPage";
+import ContactPage from "./pages/ContactPage";
+
 
 function Home() {
   const location = useLocation();
@@ -31,7 +35,6 @@ function Home() {
       }, 100);
     }
   }, [location, navigate]);
-
   return (
     <>
       <Hero />
@@ -39,11 +42,10 @@ function Home() {
       <Divider />
       <Schedule />
       <Divider />
-      <Coordinators />
       <Divider />
       <Gallery />
       <Divider />
-      <Sponsors />
+      <Sponsors show="platinum" />
       <Footer />
     </>
   );
@@ -59,6 +61,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/events/:eventSlug" element={<EventPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/coordinators" element={<CoordinatorsPage />} />
+          <Route path="/sponsors" element={<SponsorsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
     </Router>

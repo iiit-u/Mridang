@@ -7,22 +7,26 @@ import mridangLogo from "../assets/mridang-logo.svg";
 const NavBar = () => {
   const location = useLocation();
   const navigate = useNavigate();
+
+  // --- 1. UPDATED menuItems ARRAY ---
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "Events", path: "/#events" },
     { name: "Schedule", path: "/#schedule" },
-    { name: "Coordinators", path: "/#coordinators" },
-    { name: "Gallery", path: "/#gallery" },
-    { name: "Sponsors", path: "/#sponsors" },
+    { name: "Coordinators", path: "/coordinators" }, // <-- CHANGED
+    { name: "Gallery", path: "/gallery" },        // <-- CHANGED
+    { name: "Sponsors", path: "/sponsors" },        // <-- CHANGED
+    { name: "Contact", path: "/contact" },
   ];
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // --- 2. UPDATED handleNavClick FUNCTION ---
   const handleNavClick = (path, e) => {
-    e.preventDefault();
-    setIsMenuOpen(false);
+    setIsMenuOpen(false); // Close menu on any click
+
     if (path.startsWith("/#")) {
-      // Handle hash navigation
+      e.preventDefault(); // Prevent default only for hash links
       const hash = path.substring(1);
       if (location.pathname === "/") {
         // If already on home, just scroll
@@ -37,7 +41,7 @@ const NavBar = () => {
         navigate(`/${hash}`);
       }
     } else if (path === "/") {
-      // Handle home navigation - scroll to hero section or top
+      e.preventDefault(); // Prevent default only for home link
       if (location.pathname === "/") {
         // If already on home, scroll to hero section
         setTimeout(() => {
@@ -51,16 +55,15 @@ const NavBar = () => {
       } else {
         // Navigate to home
         navigate("/");
+        // Scroll to top after navigation
         setTimeout(() => {
-          const heroElement = document.querySelector("#home");
-          if (heroElement) {
-            heroElement.scrollIntoView({ behavior: "smooth" });
-          } else {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }
+          window.scrollTo({ top: 0, behavior: "smooth" });
         }, 100);
       }
     }
+    // For all other paths (e.g., "/gallery", "/sponsors", "/coordinators"):
+    // We DON'T call e.preventDefault().
+    // The <Link> component's default behavior will trigger and navigate to the new page.
   };
 
   return (
@@ -144,6 +147,7 @@ const NavBar = () => {
           {menuItems.map((item, index) => (
             <React.Fragment key={item.name}>
               {item.path.startsWith("/#") ? (
+                // Use <a> for hash links
                 <a
                   href={item.path}
                   onClick={(e) => handleNavClick(item.path, e)}
@@ -152,6 +156,7 @@ const NavBar = () => {
                   {item.name}
                 </a>
               ) : (
+                // Use <Link> for page routes
                 <Link
                   to={item.path}
                   onClick={(e) => handleNavClick(item.path, e)}
@@ -177,8 +182,8 @@ const NavBar = () => {
           transition-all duration-300 ease-in-out
           ${
             isMenuOpen
-              ? "max-h-96" // Removed opacity-100 and py-3
-              : "max-h-0"  // Removed opacity-0 and py-0
+              ? "max-h-96"
+              : "max-h-0"
           }
         `}
         style={{
@@ -189,10 +194,10 @@ const NavBar = () => {
           backgroundBlendMode: "multiply",
         }}
       >
-        {/* ADD py-3 HERE */}
         <div className="flex flex-col items-center gap-3 py-3">
-          {menuItems.map((item) => (
+          {menuItems.map((item) =>
             item.path.startsWith("/#") ? (
+              // Use <a> for hash links
               <a
                 key={item.name}
                 href={item.path}
@@ -202,19 +207,17 @@ const NavBar = () => {
                 {item.name}
               </a>
             ) : (
+              // Use <Link> for page routes
               <Link
                 key={item.name}
                 to={item.path}
-                onClick={(e) => {
-                  handleNavClick(item.path, e);
-                  setIsMenuOpen(false);
-                }}
+                onClick={(e) => handleNavClick(item.path, e)} // Simplified this onClick
                 className="text-[#fff1d1] hover:text-[#ffe482] text-base transition-colors duration-300"
               >
                 {item.name}
               </Link>
             )
-          ))}
+          )}
         </div>
       </div>
 
