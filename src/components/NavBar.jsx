@@ -15,7 +15,7 @@ const NavBar = () => {
     { name: "Schedule", path: "/#schedule" },
     { name: "Coordinators", path: "/coordinators" }, // <-- CHANGED
     { name: "Gallery", path: "/gallery" },        // <-- CHANGED
-    { name: "Sponsors", path: "/sponsors" },        // <-- CHANGED
+    // { name: "Sponsors", path: "/sponsors" },        // <-- CHANGED
     { name: "Contact", path: "/contact" },
   ];
 

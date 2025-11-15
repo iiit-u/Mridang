@@ -136,41 +136,15 @@ const Events = () => {
 
       {/* Mandalas */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-[1]">
-        {/* Desktop mandalas */}
-        <img
-          src={mandala}
-          alt="Decorative mandala"
-          loading="lazy"
-          className="hidden md:block absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[50%] opacity-20 w-[480px]"
-        />
-        <img
-          src={mandala}
-          alt="Decorative mandala"
-          loading="lazy"
-          className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-[50%] opacity-20 w-[480px]"
-        />
-
-        {/* Mobile mandalas - multiple copies alternating left/right */}
+        {/* ... mandala images ... */}
+        <img src={mandala} alt="Decorative mandala" loading="lazy" className="hidden md:block absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[50%] opacity-20 w-[480px]" />
+        <img src={mandala} alt="Decorative mandala" loading="lazy" className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-[50%] opacity-20 w-[480px]" />
         {[0, 1, 2, 3, 4].map((index) => {
-          const isLeft = index % 2 === 0;
-          const topPosition = `${15 + index * 18}%`;
-          
-          return (
-            <img
-              key={`events-mandala-${index}`}
-              src={mandala}
-              alt="Decorative mandala"
-              loading="lazy"
-              className={`md:hidden absolute opacity-20 w-[200px]`}
-              style={{
-                top: topPosition,
-                [isLeft ? 'left' : 'right']: 0,
-                transform: isLeft 
-                  ? 'translateX(-50%) translateY(-50%)' 
-                  : 'translateX(50%) translateY(-50%)',
-              }}
-            />
-          );
+            const isLeft = index % 2 === 0;
+            const topPosition = `${15 + index * 18}%`;
+            return (
+                <img key={`events-mandala-${index}`} src={mandala} alt="Decorative mandala" loading="lazy" className={`md:hidden absolute opacity-20 w-[200px]`} style={{ top: topPosition, [isLeft ? 'left' : 'right']: 0, transform: isLeft ? 'translateX(-50%) translateY(-50%)' : 'translateX(50%) translateY(-50%)' }} />
+            );
         })}
       </div>
 
@@ -222,12 +196,27 @@ const Events = () => {
                         <p className="text-[#704832] font-serif text-sm leading-relaxed">{event.description}</p>
                       </div>
 
+                      {/* --- START: MODIFIED SECTION --- */}
                       {isActive && (
-                        <Link to={`/events/${event.link}`} className="group inline-flex items-center gap-2 text-[#5C1E15] font-medium hover:text-[#D5B37A] text-sm">
-                          <span>View Details</span>
-                          <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#5C1E15] text-[#f8f3e7] group-hover:translate-x-1 transition">→</span>
-                        </Link>
+                        <div className="flex items-center justify-between">
+                          <Link to={`/events/${event.link}`} className="group inline-flex items-center gap-2 text-[#5C1E15] font-medium hover:text-[#D5B37A] text-sm">
+                            <span>View Details</span>
+                            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#5C1E15] text-[#f8f3e7] group-hover:translate-x-1 transition">→</span>
+                          </Link>
+
+                          {/* --- THIS IS THE NEW BUTTON --- */}
+                          <a
+                            href="https://linktr.ee/mridang2k25" // <-- **** REPLACE THIS URL ****
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-[#5C1E15] text-white font-heading px-4 py-2 rounded-md shadow-lg transition-transform hover:scale-105 active:scale-95 text-sm"
+                          >
+                            Register Now
+                          </a>
+                        </div>
                       )}
+                      {/* --- END: MODIFIED SECTION --- */}
+
                     </div>
                   </div>
                 </div>

@@ -45,7 +45,7 @@ function Home() {
       <Divider />
       <Gallery />
       <Divider />
-      <Sponsors show="platinum" />
+      {/* <Sponsors show="platinum" /> */}
       <Footer />
     </>
   );
@@ -62,7 +62,7 @@ function App() {
           <Route path="/events/:eventSlug" element={<EventPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/coordinators" element={<CoordinatorsPage />} />
-          <Route path="/sponsors" element={<SponsorsPage />} />
+          {/* <Route path="/sponsors" element={<SponsorsPage />} /> */}
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>

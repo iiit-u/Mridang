@@ -110,18 +110,9 @@ const EventPage = () => {
 
       {/* Mandalas */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-[1]">
-        <img
-          src={mandala}
-          alt="Decorative mandala"
-          loading="lazy"
-          className="hidden md:block absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[50%] opacity-20 w-[480px]"
-        />
-        <img
-          src={mandala}
-          alt="Decorative mandala"
-          loading="lazy"
-          className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-[50%] opacity-20 w-[480px]"
-        />
+        {/* ... mandala images ... */}
+        <img src={mandala} alt="Decorative mandala" loading="lazy" className="hidden md:block absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[50%] opacity-20 w-[480px]" />
+        <img src={mandala} alt="Decorative mandala" loading="lazy" className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-[50%] opacity-20 w-[480px]" />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6">
@@ -160,6 +151,19 @@ const EventPage = () => {
                 {event.details}
               </p>
             </div>
+
+            {/* --- NEW BUTTON ADDED HERE --- */}
+            <div className="text-center mt-10">
+              <a
+                href="https://linktr.ee/mridang2k25" // <-- **** REPLACE THIS URL ****
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#5C1E15] text-white font-heading px-8 py-3 rounded-md shadow-lg transition-transform hover:scale-105 active:scale-95 text-lg"
+              >
+                Register Now
+              </a>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -168,4 +172,3 @@ const EventPage = () => {
 };
 
 export default EventPage;
-
