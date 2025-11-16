@@ -151,18 +151,6 @@ const EventPage = () => {
                 {event.details}
               </p>
             </div>
-
-            {/* --- NEW BUTTON ADDED HERE --- */}
-            <div className="text-center mt-10">
-              <a
-                href="https://linktr.ee/mridang2k25" // <-- **** REPLACE THIS URL ****
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-[#5C1E15] text-white font-heading px-8 py-3 rounded-md shadow-lg transition-transform hover:scale-105 active:scale-95 text-lg"
-              >
-                Register Now
-              </a>
-            </div>
             
           </div>
         </div>
