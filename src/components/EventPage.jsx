@@ -10,32 +10,32 @@ const eventsData = {
     details: "Raag Samarpan is a musical journey that brings together the finest voices and instruments to create an atmosphere of spiritual devotion. Participants showcase their talent through classical and semi-classical renditions, creating moments of pure musical bliss.",
   },
   "skit": {
-    title: "Skit",
+    title: "Qayamat-e-Jungle",
     description: "A heartfelt stage performance blending contemporary narratives with emotion.",
     details: "Skit brings stories to life on stage, combining drama, comedy, and emotion. Teams present original scripts that reflect social issues, campus life, and human experiences, leaving the audience both entertained and thoughtful.",
   },
   "kavi-sammelan": {
-    title: "Kavi Sammelan",
+    title: "Alfaaz",
     description: "An evening of poetry adorned with words strung like pearls.",
     details: "Kavi Sammelan is a celebration of words and emotions. Poets from across the campus share their verses, creating an evening filled with rhythm, rhyme, and profound expressions of human experience.",
   },
   "qawwali": {
-    title: "Qawwali",
+    title: "Mehfil-e-Mridang",
     description: "Sufi-inspired harmonies that ignite the spirit of the mehfil.",
     details: "Qawwali night brings the soulful sounds of Sufi music to Mridang. The powerful vocals and rhythmic instruments create an atmosphere of spiritual ecstasy, connecting hearts through the universal language of music.",
   },
   "mystery-detective-battle": {
-    title: "Mystery Detective Battle",
+    title: "Murder Mystery",
     description: "Unravel high-stakes mysteries in a battle of sharp instincts.",
     details: "Test your detective skills in this thrilling competition. Participants solve complex mysteries, crack codes, and piece together clues in a race against time. Only the sharpest minds will emerge victorious.",
   },
   "memefest-script-writing-debate": {
-    title: "MemeFest & Script Writing & Debate",
+    title: "Plot Twist",
     description: "A triple treat of humor, creative scripts, and electric debates.",
     details: "Three competitions in one! MemeFest celebrates digital humor, Script Writing showcases creative storytelling, and Debate brings out the orator in you. A perfect blend of creativity, wit, and eloquence.",
   },
   "adwartize": {
-    title: "Adwartize",
+    title: "Ad-war-tize",
     description: "A creative showdown crafting captivating advertising videos.",
     details: "Adwartize challenges teams to create compelling advertising campaigns. From concept to execution, participants showcase their marketing creativity and video production skills in this competitive event.",
   },
