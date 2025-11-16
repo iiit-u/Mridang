@@ -1,22 +1,27 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from "react-router-dom";
+
+// Your existing components
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Events from "./components/Events";
 import Schedule from "./components/Schedule";
+// import Coordinators from "./components/Coordinators"; // No longer needed in Home
 import Gallery from "./components/Gallery";
-import Sponsors from "./components/Sponsors";
+// import Sponsors from "./components/Sponsors";
+import PastPerformers from "./components/PastPerformers"; // You added this
 import GalleryPage from "./components/GalleryPage";
 import EventPage from "./components/EventPage";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer"; 
 import Divider from "./components/Divider";
 
+// --- IMPORT YOUR PAGES ---
 import CoordinatorsPage from "./pages/CoordinatorsPage";
-import SponsorsPage from "./pages/SponsorsPage";
+// import SponsorsPage from "./pages/SponsorsPage";
 import ContactPage from "./pages/ContactPage";
 
-
+// --- YOUR HOME COMPONENT ---
 function Home() {
   const location = useLocation();
   const navigate = useNavigate();
@@ -35,6 +40,7 @@ function Home() {
       }, 100);
     }
   }, [location, navigate]);
+
   return (
     <>
       <Hero />
@@ -42,15 +48,17 @@ function Home() {
       <Divider />
       <Schedule />
       <Divider />
-      <Divider />
       <Gallery />
       <Divider />
-      {/* <Sponsors show="platinum" /> */}
+      <PastPerformers />
+      <Divider />
+      {/* <Sponsors show="platinum" />  */}
       <Footer />
     </>
   );
 }
 
+// --- YOUR MODIFIED APP COMPONENT ---
 function App() {
   return (
     <Router>
@@ -66,6 +74,17 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
+      
+      {/* --- FLOATING REGISTER BUTTON --- */}
+      <a
+        href="https://linktr.ee/mridang2k25" // <-- Your Linktree URL
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 bg-[#5C1E15] text-white font-heading px-6 py-3 rounded-full shadow-xl transition-transform hover:scale-105 active:scale-95 text-lg"
+      >
+        Register Now
+      </a>
+      
     </Router>
   );
 }

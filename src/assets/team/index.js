@@ -15,6 +15,7 @@ import mayank from "./mayank.jpg"
 import shashank from "./shashank.png"
 import saksham from "./saksham.jpg"
 import kalash from "./kalash.jpg"
+import sangharsh from "./sangharsh.jpg"
 
 // 2. Export them all as a single object
 export const teamImages = {
@@ -34,4 +35,5 @@ export const teamImages = {
   shashank,
   saksham,
   kalash,
+  sangharsh,
 };

@@ -64,7 +64,7 @@ const socialLinks = [
   {
     name: "Call",
     icon: <FiPhone />,
-    url: "tel:+911234567890", // <-- ADDED (Update phone if needed)
+    url: "tel:+917814903883", // <-- ADDED (Update phone if needed)
   },
   { name: "Instagram", icon: <FiInstagram />, url: "https://www.instagram.com/mridang_iiitu/" },
   { name: "LinkedIn", icon: <FiLinkedin />, url: "https://www.linkedin.com" },

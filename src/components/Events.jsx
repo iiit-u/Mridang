@@ -5,17 +5,17 @@ import mandala from "../assets/mandala.png";
 
 const eventsList = [
   { title: "Raag Samarpan", description: "Soul-stirring solos and duets celebrating melodies of devotion.", link: "raag-samarpan" },
-  { title: "Skit", description: "A heartfelt stage performance blending contemporary narratives with emotion.", link: "skit" },
-  { title: "Kavi Sammelan", description: "An evening of poetry adorned with words strung like pearls.", link: "kavi-sammelan" },
-  { title: "Qawwali", description: "Sufi-inspired harmonies that ignite the spirit of the mehfil.", link: "qawwali" },
-  { title: "Mystery Detective Battle", description: "Unravel high-stakes mysteries in a battle of sharp instincts.", link: "mystery-detective-battle" },
-  { title: "MemeFest & Script Writing & Debate", description: "A triple treat of humor, creative scripts, and electric debates.", link: "memefest-script-writing-debate" },
-  { title: "Adwartize", description: "A creative showdown crafting captivating advertising videos.", link: "adwartize" },
+  { title: "Qayamat-e-Jungle", description: "A heartfelt stage performance blending contemporary narratives with emotion.", link: "skit" },
+  { title: "Alfaaz", description: "An evening of poetry adorned with words strung like pearls.", link: "kavi-sammelan" },
+  { title: "Mehfil-e-Mridang", description: "Sufi-inspired harmonies that ignite the spirit of the mehfil.", link: "qawwali" },
+  { title: "Murder Mystery", description: "Unravel high-stakes mysteries in a battle of sharp instincts.", link: "mystery-detective-battle" },
+  { title: "Plot Twist", description: "A triple treat of humor, creative scripts, and electric debates.", link: "memefest-script-writing-debate" },
+  { title: "Ad-war-tize", description: "A creative showdown crafting captivating advertising videos.", link: "adwartize" },
   { title: "Student Stalls", description: "A vibrant marketplace showcasing student innovation and creations.", link: "student-stalls" },
   { title: "Dancers' Den", description: "A dance battleground pulsing with rhythm, energy, and flair.", link: "dancers-den" },
   { title: "Fashion Show", description: "A runway spectacle fusing cultural elegance with modern style.", link: "fashion-show" },
   { title: "FIFA", description: "Digital football thrills take over the esports arena.", link: "fifa" },
-  { title: "Art Exhibition", description: "Emotions etched on canvas for an unforgettable art journey.", link: "art-exhibition" },
+  { title: "Kala Darbaar", description: "Emotions etched on canvas for an unforgettable art journey.", link: "art-exhibition" },
   { title: "Rap Showcase", description: "A night drenched in rhyme, rhythm, and raw rap energy.", link: "rap-showcase" },
   { title: "Battle of Bands", description: "Live bands go head-to-head in an electrifying musical clash.", link: "battle-of-bands" },
 ];
@@ -36,7 +36,7 @@ const Events = () => {
     }
     autoPlayRef.current = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % eventsList.length);
-    }, 3000);
+    }, 5000);
   };
 
   useEffect(() => {
@@ -203,16 +203,6 @@ const Events = () => {
                             <span>View Details</span>
                             <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#5C1E15] text-[#f8f3e7] group-hover:translate-x-1 transition">→</span>
                           </Link>
-
-                          {/* --- THIS IS THE NEW BUTTON --- */}
-                          <a
-                            href="https://linktr.ee/mridang2k25" // <-- **** REPLACE THIS URL ****
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-[#5C1E15] text-white font-heading px-4 py-2 rounded-md shadow-lg transition-transform hover:scale-105 active:scale-95 text-sm"
-                          >
-                            Register Now
-                          </a>
                         </div>
                       )}
                       {/* --- END: MODIFIED SECTION --- */}

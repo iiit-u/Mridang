@@ -112,8 +112,7 @@ const Hero = () => {
         </h1>
 
         <p className="text-[0.9rem] sm:text-base md:text-lg max-w-3xl text-[#704832] leading-relaxed font-serif px-5 sm:px-0">
-          A cultural confluence weaving the soulful traditions of Himachal with the
-          nostalgic elegance of retro India.
+A cultural experience that's both divine and dynamic. Mridang 2025 is going full retro. We're celebrating our heritage with a nostalgic twist, filled with soulful rhythms and psychedelic vibes.
         </p>
 
         <a
