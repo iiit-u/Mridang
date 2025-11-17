@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import borderTop from "../assets/border-top.jpg";
-import borderBottom from "../assets/border-bottom.jpg";
+import borderTop from "../assets/border-top.webp";
+import borderBottom from "../assets/border-bottom.webp";
 import mridangLogo from "../assets/mridang-logo.svg";
 
 const NavBar = () => {

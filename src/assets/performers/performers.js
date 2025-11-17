@@ -1,7 +1,7 @@
-import akhil from "./akhil.jpg"
-import amrit from "./amrit.jpg"
-import priyank from "./priyank.jpg"
-import youngblood from "./youngblood.png"
+import akhil from "./akhil.webp"
+import amrit from "./amrit.webp"
+import priyank from "./priyank.webp"
+import youngblood from "./youngblood.webp"
 
 
 export const performerImages = {

@@ -1,7 +1,7 @@
 import React from "react";
-import texture from "../assets/texture.jpeg";
-import underline from "../assets/underline.png";
-import mandala from "../assets/mandala.png";
+import texture from "../assets/texture.webp";
+import underline from "../assets/underline.webp";
+import mandala from "../assets/mandala.webp";
 import Divider from "./Divider";
 import { teamImages } from "../assets/team";
 // --- FACULTY DATA (Unchanged) ---

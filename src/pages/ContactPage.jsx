@@ -1,8 +1,8 @@
 import React from "react";
 import Footer from "../components/Footer";
 import Divider from "../components/Divider";
-import texture from "../assets/texture.jpeg";
-import mandala from "../assets/mandala.png";
+import texture from "../assets/texture.webp";
+import mandala from "../assets/mandala.webp";
 
 // Import the icons you just installed
 import {

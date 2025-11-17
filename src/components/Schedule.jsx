@@ -1,8 +1,8 @@
 import React from "react";
-import scroll from "../assets/scroll.png";
-import texture from "../assets/texture.jpeg";
-import motif from "../assets/motif.png";
-import mandala from "../assets/mandala.png";
+import scroll from "../assets/scroll.webp";
+import texture from "../assets/texture.webp";
+import motif from "../assets/motif.webp";
+import mandala from "../assets/mandala.webp";
 
 const festivalSchedule = [
   {

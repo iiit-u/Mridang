@@ -1,4 +1,4 @@
-import texture from "../assets/texture.jpeg";
+import texture from "../assets/texture.webp";
 
 const Divider = () => {
     return (

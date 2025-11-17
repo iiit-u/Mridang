@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import texture from "../assets/texture.jpeg";
-import mandala from "../assets/mandala.png";
+import texture from "../assets/texture.webp";
+import mandala from "../assets/mandala.webp";
 // Gallery images
-import img1 from "../assets/Gallery/1.jpg";
-import img2 from "../assets/Gallery/2.jpg";
-import img3 from "../assets/Gallery/3.jpg";
-import img4 from "../assets/Gallery/4.jpg";
+import img1 from "../assets/Gallery/1.webp";
+import img2 from "../assets/Gallery/2.webp";
+import img3 from "../assets/Gallery/3.webp";
+import img4 from "../assets/Gallery/4.webp";
 
 const Gallery = () => {
   const galleryImages = [

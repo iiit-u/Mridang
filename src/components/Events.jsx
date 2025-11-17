@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import texture from "../assets/texture.jpeg";
-import mandala from "../assets/mandala.png";
+import texture from "../assets/texture.webp";
+import mandala from "../assets/mandala.webp";
 
 const eventsList = [
   { title: "Raag Samarpan", description: "Soul-stirring solos and duets celebrating melodies of devotion.", link: "raag-samarpan" },

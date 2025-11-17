@@ -1,19 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import texture from "../assets/texture.jpeg";
-import mandala from "../assets/mandala.png";
+import texture from "../assets/texture.webp";
+import mandala from "../assets/mandala.webp";
 
 // --- Past Sponsor Logos (Your existing imports) ---
-import chaiBooze from "../assets/SponsorLogo/Chai Booze.jpg";
-import chaiSuttaBar from "../assets/SponsorLogo/Chai Sutta Bar.jpg";
-import hpmc from "../assets/SponsorLogo/HPMC.jpg";
-import iskconChandigarh from "../assets/SponsorLogo/Iskcon Chandigarh.jpg";
-import kwikpic from "../assets/SponsorLogo/Kwikpic.jpg";
-import mrBurger from "../assets/SponsorLogo/Mr Burger.jpg";
-import mugafi from "../assets/SponsorLogo/Mugafi.jpg";
-import potatoHut from "../assets/SponsorLogo/Potato Hut.jpg";
-import stateBankOfIndia from "../assets/SponsorLogo/State Bank of India.jpg";
-import theOGVibe from "../assets/SponsorLogo/The OG Vibe.jpg";
+import { sponsors } from "../assets/SponsorLogo/sponsorImport";
 
 // --- Placeholder for new logos ---
 const placeholderLogo = "https://placehold.co/400x300/f8f3e7/704832?text=Sponsor+Logo&font=serif";
@@ -33,16 +24,16 @@ const currentSponsors2025 = [
 
 // --- 2. UPDATED PAST SPONSORS (with website) ---
 const pastSponsors2024 = [
-  { name: "State Bank of India", logo: stateBankOfIndia, website: "https://www.onlinesbi.sbi" }, // <-- ADDED
-  { name: "HPMC", logo: hpmc, website: "https://hpmc.in" }, // <-- ADDED
-  { name: "Kwikpic", logo: kwikpic, website: "https://kwikpic.in" }, // <-- ADDED
-  { name: "Mugafi", logo: mugafi }, // <-- No website
-  { name: "Chai Booze", logo: chaiBooze }, // <-- No website
-  { name: "Chai Sutta Bar", logo: chaiSuttaBar, website: "https://chaisuttabarindia.com" }, // <-- ADDED
-  { name: "Iskcon Chandigarh", logo: iskconChandigarh, website: "https://www.iskconchandigarh.com" }, // <-- ADDED
-  { name: "Mr Burger", logo: mrBurger }, // <-- No website
-  { name: "Potato Hut", logo: potatoHut }, // <-- No website
-  { name: "The OG Vibe", logo: theOGVibe }, // <-- No website
+  { name: "State Bank of India", logo: sponsors.stateBankOfIndia, website: "https://www.onlinesbi.sbi" }, // <-- ADDED
+  { name: "HPMC", logo: sponsors.hpmc, website: "https://hpmc.in" }, // <-- ADDED
+  { name: "Kwikpic", logo: sponsors.kwikpic, website: "https://kwikpic.in" }, // <-- ADDED
+  { name: "Mugafi", logo: sponsors.mugafi }, // <-- No website
+  { name: "Chai Booze", logo: sponsors.chaiBooze }, // <-- No website
+  { name: "Chai Sutta Bar", logo: sponsors.chaiSuttaBar, website: "https://chaisuttabarindia.com" }, // <-- ADDED
+  { name: "Iskcon Chandigarh", logo: sponsors.iskconChandigarh, website: "https://www.iskconchandigarh.com" }, // <-- ADDED
+  { name: "Mr Burger", logo: sponsors.mrBurger }, // <-- No website
+  { name: "Potato Hut", logo: sponsors.potatoHut }, // <-- No website
+  { name: "The OG Vibe", logo: sponsors.theOGVibe }, // <-- No website
 ];
 
 

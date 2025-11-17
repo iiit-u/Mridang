@@ -1,7 +1,7 @@
 import React from "react";
-import iiituLogo from "../assets/iiitu-logo.png";
+import iiituLogo from "../assets/iiitu-logo.webp";
 import mridangLogo from "../assets/mridang-logo.svg";
-import mandala from "../assets/mandala.png";
+import mandala from "../assets/mandala.webp";
 
 const Footer = () => {
   return (

@@ -10,8 +10,8 @@ import Schedule from "./components/Schedule";
 import Gallery from "./components/Gallery";
 // import Sponsors from "./components/Sponsors";
 import PastPerformers from "./components/PastPerformers"; // You added this
-import GalleryPage from "./components/GalleryPage";
-import EventPage from "./components/EventPage";
+import GalleryPage from "./pages/GalleryPage";
+import EventPage from "./pages/EventPage";
 import ScrollToTop from "./components/ScrollToTop";
 import Footer from "./components/Footer"; 
 import Divider from "./components/Divider";

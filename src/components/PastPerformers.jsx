@@ -1,7 +1,7 @@
 import React from "react";
 import { performerImages } from "../assets/performers/performers.js";
-import texture from "../assets/texture.jpeg";
-import mandala from "../assets/mandala.png";
+import texture from "../assets/texture.webp";
+import mandala from "../assets/mandala.webp";
 
 const performersList = [
   { name: "Amrit Maan", image: performerImages.amrit },

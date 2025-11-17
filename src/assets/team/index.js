@@ -1,21 +1,21 @@
 // 1. Import all your team images
-import abhishek from "./abhishek.jpg";
-import devansh from "./devansh.jpg";
-import director from "./director.jpg";
-import facultyLeft from "./faculty-left.jpg";
-import facultyRight from "./faculty-right.jpg";
-import harsh from "./harsh.jpg";
-import kartik from "./kartik.jpg";
-import shiven from "./shiven.jpg";
-import tarsem from "./tarsem.jpg";
-import rachit from "./rachit.jpg";
-import chirag from "./chirag.jpg"
-import vinit from "./vinit.jpg"
-import mayank from "./mayank.jpg"
-import shashank from "./shashank.png"
-import saksham from "./saksham.jpg"
-import kalash from "./kalash.jpg"
-import sangharsh from "./sangharsh.jpg"
+import abhishek from "./abhishek.webp";
+import devansh from "./devansh.webp";
+import director from "./director.webp";
+import facultyLeft from "./faculty-left.webp";
+import facultyRight from "./faculty-right.webp";
+import harsh from "./harsh.webp";
+import kartik from "./kartik.webp";
+import shiven from "./shiven.webp";
+import tarsem from "./tarsem.webp";
+import rachit from "./rachit.webp";
+import chirag from "./chirag.webp"
+import vinit from "./vinit.webp"
+import mayank from "./mayank.webp"
+import shashank from "./shashank.webp"
+import saksham from "./saksham.webp"
+import kalash from "./kalash.webp"
+import sangharsh from "./sangharsh.webp"
 
 // 2. Export them all as a single object
 export const teamImages = {

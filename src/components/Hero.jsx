@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
-import texture from "../assets/texture.jpeg";
-import archs from "../assets/archs.png";
-import mandala from "../assets/mandala.png";
+import texture from "../assets/texture.webp";
+import archs from "../assets/archs.webp";
+import mandala from "../assets/mandala.webp";
 
 const Hero = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
