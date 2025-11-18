@@ -9,7 +9,6 @@ function CoordinatorsPage() {
       <div className="pt-24"> {/* Adds padding so content isn't hidden by NavBar */}
         <Coordinators />
       </div>
-      <Divider />
       <Footer />
     </>
   );

@@ -57,78 +57,112 @@ export default function Schedule() {
         backgroundColor: "#f8f0e3",
       }}
     >
-      {/* Background overlay (unchanged) */}
+      {/* Background overlay */}
       <div className="absolute inset-0 bg-[#f8f3e7]/65 backdrop-blur-[1px] z-0 pointer-events-none"></div>
 
-      {/* Mandalas (unchanged) */}
+      {/* Mandalas */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        {/* ... all your mandala images ... */}
-        <img src={mandala} alt="Decorative mandala" loading="lazy" className="hidden md:block absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[50%] opacity-20 w-[480px]" />
-        <img src={mandala} alt="Decorative mandala" loading="lazy" className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-[50%] opacity-20 w-[480px]" />
+        <img
+          src={mandala}
+          alt="Decorative mandala"
+          loading="lazy"
+          className="hidden md:block absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[50%] opacity-20 w-[480px]"
+        />
+        <img
+          src={mandala}
+          alt="Decorative mandala"
+          loading="lazy"
+          className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-[50%] opacity-20 w-[480px]"
+        />
+
         {[0, 1, 2, 3, 4].map((index) => {
-            const isLeft = index % 2 === 0;
-            const topPosition = `${15 + index * 18}%`;
-            return (
-                <img key={`schedule-mandala-${index}`} src={mandala} alt="Decorative mandala" loading="lazy" className={`md:hidden absolute opacity-20 w-[200px]`} style={{ top: topPosition, [isLeft ? 'left' : 'right']: 0, transform: isLeft ? 'translateX(-50%) translateY(-50%)' : 'translateX(50%) translateY(-50%)' }} />
-            );
+          const isLeft = index % 2 === 0;
+          const topPosition = `${15 + index * 18}%`;
+          return (
+            <img
+              key={`schedule-mandala-${index}`}
+              src={mandala}
+              alt="Decorative mandala"
+              loading="lazy"
+              className="md:hidden absolute opacity-20 w-[200px]"
+              style={{
+                top: topPosition,
+                [isLeft ? "left" : "right"]: 0,
+                transform: isLeft
+                  ? "translateX(-50%) translateY(-50%)"
+                  : "translateX(50%) translateY(-50%)",
+              }}
+            />
+          );
         })}
       </div>
 
-      {/* --- 1. MODIFICATION: Added blur classes to your content wrapper ---
-        I've added: filter, blur-md, pointer-events-none, user-select-none, opacity-50
-      */}
-      <div className="relative z-10 filter blur-md pointer-events-none user-select-none opacity-50">
-        {/* Section Header (now blurred) */}
+      {/* CONTENT WRAPPER (NO BLUR HERE ANYMORE) */}
+      <div className="relative z-10">
+
+        {/* Section Header */}
         <div className="text-center mb-5 space-y-2">
-          <p className="uppercase tracking-[0.4em] text-xs text-[#8a5a3d]/70 animate-fade-in">
+          <p className="uppercase tracking-[0.4em] text-xs text-[#8a5a3d]/70">
             Mridang Experience
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#5C1E15] leading-tight">
             Festival Schedule
           </h2>
           <p className="text-[#704832] max-w-2xl mx-auto font-serif text-base">
-            Three days of cultural splendor, unfurling memories of tradition
-            and celebration
+            Three days of cultural splendor, unfurling memories of tradition and celebration
           </p>
         </div>
 
-        {/* Scrolls Grid (now blurred) */}
-        <div
-          className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-16"
-        >
+        {/* Scrolls Grid */}
+        <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-16">
           {festivalSchedule.map((schedule, idx) => (
             <React.Fragment key={idx}>
               <div className="relative flex justify-center items-center md:scale-115 mb-0 md:mb-6 -mt-2 md:mt-0">
-                {/* Scroll Image (unchanged) */}
+
+                {/* Scroll Image */}
                 <img
                   src={scroll}
                   alt={`${schedule.day} Scroll`}
                   className="w-full h-auto select-none"
                 />
 
-                {/* Text Overlay (unchanged) */}
+                {/* Text Overlay */}
                 <div className="absolute inset-0 flex flex-col items-center justify-start text-center px-12 sm:px-14 md:px-16 py-20 pointer-events-none">
                   <h3 className="text-[38px] text-[#5C1E15] font-bold mb-2">
                     {schedule.day}
                   </h3>
-                  <div className="w-full max-w-[280px] text-[#704832] text-[13px] leading-[1.55]">
+
+                  {/* ONLY EVENTS ARE BLURRED */}
+                  <div className="w-full max-w-[280px] text-[#704832] text-[13px] leading-[1.55] blur-[2.5px] opacity-80 scale-[.98]">
+
                     {schedule.events.map((event, eidx) => (
                       <div
                         key={eidx}
                         className="flex justify-between mb-[2px] border-b border-[#00000015] pb-[1px]"
                       >
-                        <span className="text-right opacity-80 flex-shrink-0">
+                        <span className="text-right opacity-70 flex-shrink-0">
                           {event.time}
                         </span>
-                        <span className="ml-3 text-left">
+                        <span className="ml-3 text-left opacity-70">
                           {event.name}
                         </span>
                       </div>
                     ))}
                   </div>
+
+                </div>
+
+                {/* COMING SOON OVERLAY PER SCROLL */}
+                <div className="absolute inset-0 z-20 flex items-center justify-center">
+                  <div className="bg-[#f4ebd7] backdrop-blur-sm p-3 sm:p-4 rounded-md shadow-md text-center">
+                    <p className="text-lg sm:text-xl font-heading text-[#5C1E11]">
+                      Coming Soon
+                    </p>
+                  </div>
                 </div>
               </div>
-              {/* Motif between scrolls (unchanged) */}
+
+              {/* Motif between scrolls (mobile only) */}
               {idx < festivalSchedule.length - 1 && (
                 <div className="flex justify-center items-center md:hidden">
                   <img
@@ -141,22 +175,8 @@ export default function Schedule() {
             </React.Fragment>
           ))}
         </div>
-      </div>
 
-      {/* --- 2. NEW OVERLAY --- 
-        This is placed on top of the blurred content.
-      */}
-      <div className="absolute inset-0 z-20 flex items-center justify-center">
-        <div className="bg-[#f8f3e7]/80 backdrop-blur-sm p-6 md:p-10 rounded-lg shadow-xl text-center mx-4">
-          <h3 className="text-3xl sm:text-4xl font-heading text-[#5C1E11] leading-tight">
-            Schedule Coming Soon!
-          </h3>
-          <p className="text-[#704832] font-serif text-base mt-2">
-            Stay tuned for the full lineup.
-          </p>
-        </div>
       </div>
-
     </section>
   );
 }

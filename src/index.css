@@ -30,4 +30,29 @@
   font-family: 'IM Fell English', serif;
 }
 
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8f3e7; /* match your website theme */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5C1E15;
+  border-radius: 10px;
+  border: 2px solid #f8f3e7; /* creates spacing effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8A5A3D; /* hover color */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;        /* auto, thin */
+  scrollbar-color: #5C1E15 #f8f3e7;
+}
+
 

@@ -38,7 +38,7 @@ const GalleryPage = () => {
   return (
     <section
       id="full-gallery"
-      className="mt-16 md:mt-26 relative py-14 md:py-20 text-[#5C1E15]"
+      className="mt-20 relative py-14 md:py-20 text-[#5C1E15]"
       style={{
         backgroundImage: `url(${texture})`,
         backgroundRepeat: "repeat",
@@ -98,15 +98,6 @@ const GalleryPage = () => {
       {/* CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto px-6">
 
-        {/* Back Button */}
-        <Link
-          to="/#gallery"
-          className="inline-flex items-center gap-2 text-[#5C1E15] hover:text-[#8A5A3D] font-medium mb-8 transition-colors"
-        >
-          <span>←</span>
-          <span>Back to Gallery</span>
-        </Link>
-
         {/* Title */}
         <div className="text-center mb-14">
           <p className="uppercase tracking-[0.35em] text-xs text-[#8a5a3d]/70">
@@ -152,7 +143,7 @@ const GalleryPage = () => {
             className="inline-flex items-center gap-2 text-[#5C1E15] hover:text-[#8A5A3D] font-medium transition-colors"
           >
             <span>←</span>
-            <span>Back to Gallery</span>
+            <span>Back to Home</span>
           </Link>
         </div>
       </div>

@@ -51,7 +51,7 @@ function Home() {
       <Gallery />
       <Divider />
       <PastPerformers />
-      <Divider />
+      {/* <Divider /> */}
       {/* <Sponsors show="platinum" />  */}
       <Footer />
     </>
@@ -60,6 +60,43 @@ function Home() {
 
 // --- YOUR MODIFIED APP COMPONENT ---
 function App() {
+  const [showRegisterButton, setShowRegisterButton] = React.useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.querySelector('#home');
+      const footerSection = document.querySelector('footer');
+      
+      if (!heroSection) return;
+
+      const heroHeight = heroSection.offsetHeight;
+      const scrolled = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+
+      // Show button after scrolling 25% of hero section
+      const shouldShow = scrolled > heroHeight * 0.25;
+
+      // Hide button when footer is visible
+      let isFooterVisible = false;
+      if (footerSection) {
+        const footerTop = footerSection.getBoundingClientRect().top;
+        isFooterVisible = footerTop < windowHeight;
+      }
+
+      setShowRegisterButton(shouldShow && !isFooterVisible);
+    };
+
+    handleScroll(); // Check initial state
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
@@ -77,10 +114,14 @@ function App() {
       
       {/* --- FLOATING REGISTER BUTTON --- */}
       <a
-        href="https://linktr.ee/mridang2k25" // <-- Your Linktree URL
+        href="https://linktr.ee/mridang2k25"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-[#5C1E15] text-white font-heading px-6 py-3 rounded-full shadow-xl transition-transform hover:scale-105 active:scale-95 text-lg"
+        className={`fixed bottom-6 right-6 z-50 bg-[#5C1E15] text-white font-heading px-6 py-3 rounded-full shadow-xl transition-all duration-300 text-lg ${
+          showRegisterButton 
+            ? 'opacity-100 translate-y-0 pointer-events-auto' 
+            : 'opacity-0 translate-y-4 pointer-events-none'
+        } hover:scale-105 active:scale-95`}
       >
         Register Now
       </a>

@@ -173,7 +173,7 @@ const Footer = () => {
         <div className="border-t border-[#D5B37A]/20 pt-4">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-[#E7D3BA]/80">
             <p className="tracking-wide">
-              © {new Date().getFullYear()} IIIT Una • Mridang Cultural Fest
+              © Indian Institute of Information Technology Una, Himachal Pradesh 2025
             </p>
           </div>
         </div>
