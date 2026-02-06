@@ -3,7 +3,7 @@ import amrit from "./amrit.webp"
 import priyank from "./priyank.webp"
 import youngblood from "./youngblood.webp"
 import shahid from "./shahid.webp"
-import snehi from "./snehi.webp"
+import snehi from "./Snehi.webp"
 import vj from "./vj.webp"
 
 
