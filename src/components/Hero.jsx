@@ -74,7 +74,7 @@ const Hero = () => {
         {[0, 1, 2, 3, 4].map((index) => {
           const isLeft = index % 2 === 0;
           const topPosition = `${15 + index * 18}%`;
-          
+
           return (
             <img
               key={`hero-mandala-${index}`}
@@ -84,10 +84,10 @@ const Hero = () => {
               className={`md:hidden absolute opacity-20 w-[200px]`}
               style={{
                 top: topPosition,
-                [isLeft ? 'left' : 'right']: 0,
-                transform: isLeft 
-                  ? 'translateX(-50%) translateY(-50%)' 
-                  : 'translateX(50%) translateY(-50%)',
+                [isLeft ? "left" : "right"]: 0,
+                transform: isLeft
+                  ? "translateX(-50%) translateY(-50%)"
+                  : "translateX(50%) translateY(-50%)",
               }}
             />
           );
@@ -108,11 +108,15 @@ const Hero = () => {
         </div>
 
         <h1 className="text-[2.3rem] sm:text-5xl md:text-7xl font-heading text-[#5C1E15] tracking-wide leading-tight drop-shadow-[0_6px_12px_rgba(92,30,21,0.2)] px-3">
-          <span className="text-[1.8rem] sm:text-5xl md:text-7xl">Welcome to </span><span className="relative whitespace-nowrap">Mridang 2025</span>
+          <span className="relative whitespace-nowrap">Mridang 2025</span>
+          <span className="block text-[1.6rem] sm:text-3xl md:text-4xl mt-2">
+            A Celebration Remembered
+          </span>
         </h1>
 
-        <p className="text-[0.9rem] sm:text-base md:text-lg max-w-3xl text-[#704832] leading-relaxed font-serif px-5 sm:px-0">
-A cultural experience that's both divine and dynamic. Mridang 2025 is going full retro. We're celebrating our heritage with a nostalgic twist, filled with soulful rhythms and psychedelic vibes.
+        <p className="text-[0.9rem] sm:text-base md:text-lg max-w-2xl text-[#704832] leading-relaxed font-serif px-5 sm:px-0">
+          A cultural fest at IIIT Una that brought tradition, rhythm, and
+          youthful energy together.
         </p>
 
         <a

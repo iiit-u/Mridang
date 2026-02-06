@@ -4,20 +4,83 @@ import texture from "../assets/texture.webp";
 import mandala from "../assets/mandala.webp";
 
 const eventsList = [
-  { title: "Raag Samarpan", description: "Soul-stirring solos and duets celebrating melodies of devotion.", link: "raag-samarpan" },
-  { title: "Qayamat-e-Jungle", description: "A heartfelt stage performance blending contemporary narratives with emotion.", link: "skit" },
-  { title: "Alfaaz", description: "An evening of poetry adorned with words strung like pearls.", link: "kavi-sammelan" },
-  { title: "Mehfil-e-Mridang", description: "Sufi-inspired harmonies that ignite the spirit of the mehfil.", link: "qawwali" },
-  { title: "Murder Mystery", description: "Unravel high-stakes mysteries in a battle of sharp instincts.", link: "mystery-detective-battle" },
-  { title: "Plot Twist", description: "A triple treat of humor, creative scripts, and electric debates.", link: "memefest-script-writing-debate" },
-  { title: "Ad-war-tize", description: "A creative showdown crafting captivating advertising videos.", link: "adwartize" },
-  { title: "Student Stalls", description: "A vibrant marketplace showcasing student innovation and creations.", link: "student-stalls" },
-  { title: "Dancers' Den", description: "A dance battleground pulsing with rhythm, energy, and flair.", link: "dancers-den" },
-  { title: "Fashion Show", description: "A runway spectacle fusing cultural elegance with modern style.", link: "fashion-show" },
-  { title: "FIFA", description: "Digital football thrills take over the esports arena.", link: "fifa" },
-  { title: "Kala Darbaar", description: "Emotions etched on canvas for an unforgettable art journey.", link: "art-exhibition" },
-  { title: "Rap Showcase", description: "A night drenched in rhyme, rhythm, and raw rap energy.", link: "rap-showcase" },
-  { title: "Battle of Bands", description: "Live bands go head-to-head in an electrifying musical clash.", link: "battle-of-bands" },
+  {
+    title: "Raag Samarpan",
+    description:
+      "Soul-stirring solos and duets celebrating melodies of devotion.",
+    link: "raag-samarpan",
+  },
+  {
+    title: "Qayamat-e-Jungle",
+    description:
+      "A heartfelt stage performance blending contemporary narratives with emotion.",
+    link: "skit",
+  },
+  {
+    title: "Alfaaz",
+    description: "An evening of poetry adorned with words strung like pearls.",
+    link: "kavi-sammelan",
+  },
+  {
+    title: "Mehfil-e-Mridang",
+    description:
+      "Sufi-inspired harmonies that ignite the spirit of the mehfil.",
+    link: "qawwali",
+  },
+  {
+    title: "Murder Mystery",
+    description:
+      "Unravel high-stakes mysteries in a battle of sharp instincts.",
+    link: "mystery-detective-battle",
+  },
+  {
+    title: "Plot Twist",
+    description:
+      "A triple treat of humor, creative scripts, and electric debates.",
+    link: "memefest-script-writing-debate",
+  },
+  {
+    title: "Ad-war-tize",
+    description: "A creative showdown crafting captivating advertising videos.",
+    link: "adwartize",
+  },
+  {
+    title: "Student Stalls",
+    description:
+      "A vibrant marketplace showcasing student innovation and creations.",
+    link: "student-stalls",
+  },
+  {
+    title: "Dancers' Den",
+    description: "A dance battleground pulsing with rhythm, energy, and flair.",
+    link: "dancers-den",
+  },
+  {
+    title: "Fashion Show",
+    description:
+      "A runway spectacle fusing cultural elegance with modern style.",
+    link: "fashion-show",
+  },
+  {
+    title: "FIFA",
+    description: "Digital football thrills take over the esports arena.",
+    link: "fifa",
+  },
+  {
+    title: "Kala Darbaar",
+    description: "Emotions etched on canvas for an unforgettable art journey.",
+    link: "art-exhibition",
+  },
+  {
+    title: "Rap Showcase",
+    description: "A night drenched in rhyme, rhythm, and raw rap energy.",
+    link: "rap-showcase",
+  },
+  {
+    title: "Battle of Bands",
+    description: "Live bands go head-to-head in an electrifying musical clash.",
+    link: "battle-of-bands",
+  },
 ];
 
 const Events = () => {
@@ -49,7 +112,9 @@ const Events = () => {
   }, []);
 
   const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev - 1 + eventsList.length) % eventsList.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + eventsList.length) % eventsList.length,
+    );
     startAutoPlay();
   };
 
@@ -81,7 +146,9 @@ const Events = () => {
       if (diff > 0) {
         setCurrentIndex((prev) => (prev + 1) % eventsList.length);
       } else {
-        setCurrentIndex((prev) => (prev - 1 + eventsList.length) % eventsList.length);
+        setCurrentIndex(
+          (prev) => (prev - 1 + eventsList.length) % eventsList.length,
+        );
       }
       startAutoPlay();
     }
@@ -137,24 +204,53 @@ const Events = () => {
       {/* Mandalas */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-[1]">
         {/* ... mandala images ... */}
-        <img src={mandala} alt="Decorative mandala" loading="lazy" className="hidden md:block absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[50%] opacity-20 w-[480px]" />
-        <img src={mandala} alt="Decorative mandala" loading="lazy" className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-[50%] opacity-20 w-[480px]" />
+        <img
+          src={mandala}
+          alt="Decorative mandala"
+          loading="lazy"
+          className="hidden md:block absolute top-1/2 left-0 -translate-y-1/2 -translate-x-[50%] opacity-20 w-[480px]"
+        />
+        <img
+          src={mandala}
+          alt="Decorative mandala"
+          loading="lazy"
+          className="hidden md:block absolute top-1/2 right-0 -translate-y-1/2 translate-x-[50%] opacity-20 w-[480px]"
+        />
         {[0, 1, 2, 3, 4].map((index) => {
-            const isLeft = index % 2 === 0;
-            const topPosition = `${15 + index * 18}%`;
-            return (
-                <img key={`events-mandala-${index}`} src={mandala} alt="Decorative mandala" loading="lazy" className={`md:hidden absolute opacity-20 w-[200px]`} style={{ top: topPosition, [isLeft ? 'left' : 'right']: 0, transform: isLeft ? 'translateX(-50%) translateY(-50%)' : 'translateX(50%) translateY(-50%)' }} />
-            );
+          const isLeft = index % 2 === 0;
+          const topPosition = `${15 + index * 18}%`;
+          return (
+            <img
+              key={`events-mandala-${index}`}
+              src={mandala}
+              alt="Decorative mandala"
+              loading="lazy"
+              className={`md:hidden absolute opacity-20 w-[200px]`}
+              style={{
+                top: topPosition,
+                [isLeft ? "left" : "right"]: 0,
+                transform: isLeft
+                  ? "translateX(-50%) translateY(-50%)"
+                  : "translateX(50%) translateY(-50%)",
+              }}
+            />
+          );
         })}
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4">
-
         <div className="text-center mb-5 space-y-2">
-          <p className="uppercase tracking-[0.4em] text-xs text-[#8A5A3D]/70">Mridang Experience</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#5C1E15] leading-tight">Upcoming Event Highlights</h2>
+          <p className="uppercase tracking-[0.4em] text-xs text-[#8A5A3D]/70">
+            Mridang Experience
+          </p>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#5C1E15] leading-tight">
+            Event Highlights
+          </h2>
+
           <p className="text-[#704832]/85 max-w-2xl mx-auto font-serif text-base">
-            Whether you're here to perform, compete, or just soak it all in, Mridang is a mix of culture, fun, and good energy.
+            A glimpse into the performances, competitions, and moments that
+            defined Mridang 2025.
           </p>
         </div>
 
@@ -177,8 +273,9 @@ const Events = () => {
                   style={style}
                 >
                   <div
-                    className={`relative h-full rounded-3xl border border-[#5C1E15]/10 bg-[#f8f4e7] shadow-xl overflow-visible transition-all ${isActive ? "shadow-xl" : "shadow-md"
-                      }`}
+                    className={`relative h-full rounded-3xl border border-[#5C1E15]/10 bg-[#f8f4e7] shadow-xl overflow-visible transition-all ${
+                      isActive ? "shadow-xl" : "shadow-md"
+                    }`}
                   >
                     <div
                       className="absolute inset-0 opacity-20 mix-blend-multiply pointer-events-none"
@@ -191,22 +288,32 @@ const Events = () => {
 
                     <div className="relative z-10 h-full p-6 flex flex-col justify-between">
                       <div className="space-y-4">
-                        <span className="text-xs uppercase tracking-[0.5em] text-[#8a5a3d]/70">Event {String(index + 1).padStart(2, "0")}</span>
-                        <h3 className="text-2xl font-heading text-[#5C1E15]">{event.title}</h3>
-                        <p className="text-[#704832] font-serif text-sm leading-relaxed">{event.description}</p>
+                        <span className="text-xs uppercase tracking-[0.5em] text-[#8a5a3d]/70">
+                          Event {String(index + 1).padStart(2, "0")}
+                        </span>
+                        <h3 className="text-2xl font-heading text-[#5C1E15]">
+                          {event.title}
+                        </h3>
+                        <p className="text-[#704832] font-serif text-sm leading-relaxed">
+                          {event.description}
+                        </p>
                       </div>
 
                       {/* --- START: MODIFIED SECTION --- */}
                       {isActive && (
                         <div className="flex items-center justify-between">
-                          <Link to={`/events/${event.link}`} className="group inline-flex items-center gap-2 text-[#5C1E15] font-medium hover:text-[#D5B37A] text-sm">
+                          <Link
+                            to={`/events/${event.link}`}
+                            className="group inline-flex items-center gap-2 text-[#5C1E15] font-medium hover:text-[#D5B37A] text-sm"
+                          >
                             <span>View Details</span>
-                            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#5C1E15] text-[#f8f3e7] group-hover:translate-x-1 transition">→</span>
+                            <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#5C1E15] text-[#f8f3e7] group-hover:translate-x-1 transition">
+                              →
+                            </span>
                           </Link>
                         </div>
                       )}
                       {/* --- END: MODIFIED SECTION --- */}
-
                     </div>
                   </div>
                 </div>
@@ -240,8 +347,11 @@ const Events = () => {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`transition-all duration-300 rounded-full ${index === currentIndex ? "w-8 h-2 bg-[#5C1E15]" : "w-2 h-2 bg-[#5C1E1F]/30"
-                }`}
+              className={`transition-all duration-300 rounded-full ${
+                index === currentIndex
+                  ? "w-8 h-2 bg-[#5C1E15]"
+                  : "w-2 h-2 bg-[#5C1E1F]/30"
+              }`}
             />
           ))}
         </div>

@@ -115,7 +115,7 @@ function App() {
         </Routes>
       </div>
       
-      {/* --- FLOATING REGISTER BUTTON --- */}
+      {/* --- FLOATING REGISTER BUTTON ---
       <a
         href="https://linktr.ee/mridang2k25"
         target="_blank"
@@ -127,7 +127,7 @@ function App() {
         } hover:scale-105 active:scale-95`}
       >
         Register Now
-      </a>
+      </a> */}
       
     </Router>
   );

@@ -13,10 +13,10 @@ const placeholderLogo = "https://placehold.co/400x300/f8f3e7/704832?text=Sponsor
 // --- 1. CURRENT SPONSORS ---
 const currentSponsors2025 = [
   { name: "Brand Integration", logo: sponsors.hunar, level: "platinum", website: "https://www.google.com" },
-  { name: "Curated By", logo: placeholderLogo, level: "platinum" },
+  // { name: "Curated By", logo: placeholderLogo, level: "platinum" },
   { name: "Powered By", logo: sponsors.unstop, level: "gold", website: "https://www.unstop.com" },
-  { name: "Our Partner 1", logo: placeholderLogo, level: "partner", website: "https://www.google.com" },
-  { name: "Our Partner 2", logo: placeholderLogo, level: "partner" },
+  // { name: "Our Partner 1", logo: placeholderLogo, level: "partner", website: "https://www.google.com" },
+  // { name: "Our Partner 2", logo: placeholderLogo, level: "partner" },
 ];
 
 // --- 2. PAST SPONSORS ---

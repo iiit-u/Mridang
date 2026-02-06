@@ -101,12 +101,14 @@ export default function Schedule() {
           <p className="uppercase tracking-[0.4em] text-xs text-[#8a5a3d]/70">
             Mridang Experience
           </p>
+
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading text-[#5C1E15] leading-tight">
-            Festival Schedule
+            Festival Timeline
           </h2>
+
           <p className="text-[#704832] max-w-2xl mx-auto font-serif text-base">
-            Three days of cultural splendor, unfurling memories of tradition and
-            celebration
+            A chronological glimpse into the three days that shaped Mridang
+            2025.
           </p>
         </div>
 
@@ -138,9 +140,7 @@ export default function Schedule() {
                         <span className="text-right opacity-80 shrink-0">
                           {event.time}
                         </span>
-                        <span className="ml-3 text-left">
-                          {event.name}
-                        </span>
+                        <span className="ml-3 text-left">{event.name}</span>
                       </div>
                     ))}
                   </div>

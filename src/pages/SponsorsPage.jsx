@@ -9,7 +9,6 @@ function SponsorsPage() {
       <div className="pt-24"> {/* Adds padding so content isn't hidden by NavBar */}
         <Sponsors />
       </div>
-      <Divider />
       <Footer />
     </>
   );

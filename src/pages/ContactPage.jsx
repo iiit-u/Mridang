@@ -251,7 +251,6 @@ function ContactPage() {
         </div>
       </section>
 
-      <Divider />
       <Footer />
     </>
   );
